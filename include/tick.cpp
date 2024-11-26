@@ -12,7 +12,7 @@
 int skala =10;
 #pragma comment(lib,"user32.lib")
 Objek::Objek(int x,int y,int z):px(x*skala),py(y*skala),pz(z*skala){};
-int ztox(int xoy,int z){
+/*int ztox(int xoy,int z){
     int slayary = (Objek::pleb)/2;
     int slayarx = (Objek::ppan)/2;
     int dx;
@@ -23,9 +23,9 @@ int ztox(int xoy,int z){
         dx=slayarx-xoy;
         return xoy+(z/(dx/8));
     
-}
+}*/
 float asep=1.0f;
-void rotate3D(double& x, double& y, double& z, double angleX, double angleY) {
+/*void rotate3D(double& x, double& y, double& z, double angleX, double angleY) {
     // Konversi sudut ke radian
     double radX = angleX * M_PI / 180.0;
     double radY = angleY * M_PI / 180.0;
@@ -41,7 +41,7 @@ void rotate3D(double& x, double& y, double& z, double angleX, double angleY) {
     newZ = -x * sin(radY) + z * cos(radY);
     x = newX;  // Update nilai x
     z = newZ;  // Update nilai z
-}
+}*/
 double rotasi(double nkoor,double zkoor,bool sumbisy,bool koorisz){
     if(sumbisy){
         if(koorisz){
@@ -87,7 +87,7 @@ POINT pointing(int x,int y,int z){
     
     return p;
 }
-int ztoy(int xoy,int z){
+/*int ztoy(int xoy,int z){
     int slayarx = (Objek::pleb)/2;
     //int slayarx = (Objek::ppan)/2;
     int dx;
@@ -97,7 +97,7 @@ int ztoy(int xoy,int z){
     }
         dx=slayarx-xoy;
         return xoy+(z/(dx/10));
-}
+}*/
 bool kanan=false,depan=false,atas=false;
 int player::ry = 0;
 
