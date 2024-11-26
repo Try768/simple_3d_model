@@ -1,0 +1,38 @@
+if(relx >0)p.x=Objek::ppan+1;
+       // if(rely >0)p.y=Objek::pleb+1;
+        if(relx <0)p.x=-1;
+       // if(rely <0)p.y=-1;
+        if(relx ==0)p.x=Objek::ppan/2;
+       // if(rely ==0)p.y=Objek::pleb/2;
+
+rotasi(relx,rotasi(rely,relz,true,true),false,false);
+    rotasi(rely,rotasi(relx,relz,false,true),true,false);
+    rotasi(rely,rotasi(relx,relz,false,true),true,true)-1000.0;
+
+     double loky=rotasi(rely,relz,true,false);
+    double xlokz=rotasi(rely,relz,true,true);
+    
+    double lokx= (relx*cos(player::ry*radian))+(rely*sin(player::rx*radian)*sin(player::ry*radian))+(relz*cos(player::rx*radian)*sin(player::ry*radian));
+    double loky= ( rely*cos(player::rx*(M_PI/180.0)))-(relz*sin(player::rx*radian));
+    double lokz=(-1*(relx*cos(player::ry*radian)))+(rely*sin(player::rx*radian)*cos(player::ry*radian))+(relz*cos(player::rx*radian)*cos(player::ry*radian));
+    
+    if(wasd & 0b1000){
+                player::x-=(4*sin(player::rx*radian));
+                player::z-=(4*cos(player::rx*radian));            
+            }
+
+
+            if(wasd & 0b0100){
+                player::z-=(4*sin(player::rx*radian));
+                player::x+=(4*cos(player::rx*radian));
+            }
+
+            if(wasd & 0b0010){
+                player::z+=(4*cos(player::rx*radian));
+                player::x+=(4*sin(player::rx*radian));
+            }
+            if(wasd & 0b0001){
+                
+                player::z+=(4*sin(player::rx*radian));
+                player::x-=(4*cos(player::rx*radian));
+                }
