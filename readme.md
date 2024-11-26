@@ -12,5 +12,7 @@ rotating and movement
 
 note:
 press 'p' to activate rotation of the camera
+
 i comment all the failure code as a reference 
+
 and to remind me how much i failed
